@@ -1,6 +1,6 @@
 package es.jab.ExpressionComposite;
 
-public abstract class Entero extends Expresion {
+public class Entero extends Expresion {
 	
 	private int valor;
 	
