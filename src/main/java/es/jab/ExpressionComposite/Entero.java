@@ -17,5 +17,10 @@ public abstract class Entero extends Expresion {
 	public int operate() {
 		return this.valor;
 	}
+	
+	@Override
+	public String toString(){
+		return "" + this.valor;
+	}
 
 }
