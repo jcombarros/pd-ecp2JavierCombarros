@@ -1,6 +1,6 @@
 package es.jab.NaturalNumberFactory;
 
-public class NaturalNumberES extends NaturalNumberCreator {
+public class NaturalNumberFrCreator extends NaturalNumberCreator {
 
 	@Override
 	public NaturalNumber createNaturalNumber() {

@@ -11,7 +11,7 @@ public class NaturalNumberTest {
 	
 	@Before
 	public void before(){
-		NaturalNumberCreator creator = new NaturalNumberES();
+		NaturalNumberCreator creator = new NaturalNumberEsCreator();
 		naturalNumberManager = new NaturalNumberManager();
 		naturalNumberManager.setCreator(creator);
 	}
@@ -19,14 +19,14 @@ public class NaturalNumberTest {
 	@Test
 	public void createNaturalNumberTest1(){
 		naturalNumberManager.createNaturalNumber();
-		assertEquals(new NaturalNumberES(), naturalNumberManager.getNaturalNumber());
+		assertEquals(new NaturalNumberEs(), naturalNumberManager.getNaturalNumber());
 	}
 	
 	@Test
 	public void createNaturalNumberTest2(){
 		naturalNumberManager.createNaturalNumber();
 		
-		naturalNumberManager.setCreator(new NaturalNumberFr());
+		naturalNumberManager.setCreator(new NaturalNumberFrCreator());
 		naturalNumberManager.createNaturalNumber();
 		assertEquals(new NaturalNumberFr(), naturalNumberManager.getNaturalNumber());
 	}
