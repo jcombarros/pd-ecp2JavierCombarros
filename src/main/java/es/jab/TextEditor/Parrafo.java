@@ -44,7 +44,20 @@ public class Parrafo extends ComponenteMulti {
 		{
 			parrafo.append(((Caracter)componente).getLetra());
 		}
-		parrafo.append("/n");
+		parrafo.append("\n");
+		return parrafo.toString();
+	}
+	
+	@Override
+	public String dibujar(boolean mayus) {
+		StringBuilder parrafo = new StringBuilder();
+		if(mayus){
+			parrafo.append(this.toString().toUpperCase());
+		}
+		else{
+			parrafo.append(this.toString());
+		}
+		
 		return parrafo.toString();
 	}
 

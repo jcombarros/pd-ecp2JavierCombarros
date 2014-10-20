@@ -35,13 +35,13 @@ public class Caracter extends Componente {
 			return this.toString().toUpperCase(); 
 		}
 		else{
-			return Character.toString(this.letra);
+			return this.toString();
 		}
 	}
 	
 	@Override
 	public String toString(){
-		return this.toString();
+		return Character.toString(this.letra);
 	}
 	
 }

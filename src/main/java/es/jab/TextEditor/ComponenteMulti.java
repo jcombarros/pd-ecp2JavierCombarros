@@ -30,15 +30,7 @@ public abstract class ComponenteMulti extends Componente {
 	@Override
 	public abstract void delete(Componente componente);
 
-
 	@Override
-	public String dibujar(boolean mayus) {
-		if(mayus){
-			return this.toString().toUpperCase();
-		}
-		else{
-			return this.toString();
-		}
-	}
+	public abstract String dibujar(boolean mayus);
 
 }
