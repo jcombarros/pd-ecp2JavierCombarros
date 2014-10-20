@@ -28,7 +28,9 @@ public class NaturalNumberTest {
 		
 		naturalNumberManager.setCreator(new NaturalNumberFrCreator());
 		naturalNumberManager.createNaturalNumber();
-		assertEquals(new NaturalNumberFr(), naturalNumberManager.getNaturalNumber());
+		
+		NaturalNumber naturalNumber = new NaturalNumberFr();
+		assertEquals(naturalNumber, naturalNumberManager.getNaturalNumber());
 	}
 	
 	@Test
@@ -37,7 +39,7 @@ public class NaturalNumberTest {
 		NaturalNumber naturalNumber = naturalNumberManager.getNaturalNumber();
 		naturalNumber.setValue(2);
 		
-		assertEquals("uno", naturalNumber.getTextValue());
+		assertEquals("dos", naturalNumber.getTextValue());
 	}
 
 }

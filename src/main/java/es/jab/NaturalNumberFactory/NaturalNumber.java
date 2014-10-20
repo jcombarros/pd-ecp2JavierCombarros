@@ -23,4 +23,10 @@ public abstract class NaturalNumber {
 
 	public abstract String getTextValue();
 	
+	
+	@Override
+	public boolean equals(Object other){
+		return this.value == ((NaturalNumber)other).value
+				&& this.getTextValue() == ((NaturalNumber)other).getTextValue();
+	}
 }

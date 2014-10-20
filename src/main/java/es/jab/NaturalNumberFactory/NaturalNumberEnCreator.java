@@ -1,10 +1,10 @@
 package es.jab.NaturalNumberFactory;
 
-public class NaturalNumberFrCreator extends NaturalNumberCreator {
+public class NaturalNumberEnCreator extends NaturalNumberCreator {
 
 	@Override
 	public NaturalNumber createNaturalNumber() {
-		return new NaturalNumberFr();
+		return new NaturalNumberEn();
 	}
 
 }
