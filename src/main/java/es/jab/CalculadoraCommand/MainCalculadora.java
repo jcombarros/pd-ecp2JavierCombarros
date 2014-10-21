@@ -9,10 +9,10 @@ public class MainCalculadora {
     public MainCalculadora() {
         Calculadora calc = new Calculadora();
         this.gestor = new GestorComandos();
-        this.gestor.add(new ComandoSumar(calc));
-        this.gestor.add(new ComandoRestar(calc));
-        this.gestor.add(new ComandoIniciar(calc));
-        this.gestor.add(new ComandoImprimir(calc));
+        this.gestor.add(new ComandoSumarMock(calc));
+        this.gestor.add(new ComandoRestarMock(calc));
+        this.gestor.add(new ComandoIniciarMock(calc));
+        this.gestor.add(new ComandoImprimirMock(calc));
     }
 
     public void ejecutar() {

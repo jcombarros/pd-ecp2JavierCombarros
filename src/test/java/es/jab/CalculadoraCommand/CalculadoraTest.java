@@ -48,7 +48,7 @@ public class CalculadoraTest {
 		gestor.execute("Sumar");
 		gestor.execute("Sumar");
 		gestor.execute("Restar");
-		assertEquals(5, calc.getTotal());
+		assertEquals(-2, calc.getTotal());
 		
 	}
 	
