@@ -11,7 +11,7 @@ public class GestorComandos {
     }
 
     public void execute(String key) {
-        this.comandos.get(key).execute();
+        this.comandos.get(key).ejecutar();
     }
 
     public String[] keys() {
