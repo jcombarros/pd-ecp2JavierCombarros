@@ -9,15 +9,17 @@ public class MainCalculadora {
     public MainCalculadora() {
         Calculadora calc = new Calculadora();
         this.gestor = new GestorComandos();
-        this.gestor.add(new ComandoSumarMock(calc));
-        this.gestor.add(new ComandoRestarMock(calc));
-        this.gestor.add(new ComandoIniciarMock(calc));
-        this.gestor.add(new ComandoImprimirMock(calc));
+        this.gestor.add(new ComandoSumar(calc));
+        this.gestor.add(new ComandoRestar(calc));
+        this.gestor.add(new ComandoIniciar(calc));
+        this.gestor.add(new ComandoImprimir(calc));
     }
 
     public void ejecutar() {
         String key = (String) IO.in.select(this.gestor.keys());
-        this.gestor.execute(key);
+        if(key != null){
+        	this.gestor.execute(key);
+        }
     }
 
     public static void main(String[] args) {
