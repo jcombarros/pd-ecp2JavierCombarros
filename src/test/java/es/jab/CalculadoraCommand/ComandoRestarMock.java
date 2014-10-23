@@ -26,7 +26,6 @@ public class ComandoRestarMock implements Comando {
 	public void ejecutar() {
 		this.valor = 8;
 		this.calculadora.restar(this.valor);
-		IO.out.println("-" + this.valor);
 	}
 
 	@Override

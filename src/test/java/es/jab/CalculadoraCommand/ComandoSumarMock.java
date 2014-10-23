@@ -26,7 +26,6 @@ public class ComandoSumarMock implements Comando {
 	public void ejecutar() {
 		this. valor = 3;
 		this.calculadora.sumar(this.valor);
-		IO.out.println("+" + this.valor);
 	}
 
 	@Override

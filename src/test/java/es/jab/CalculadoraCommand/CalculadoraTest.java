@@ -70,7 +70,7 @@ public class CalculadoraTest {
 	public void GuardarTest() {
 		gestor.execute("Sumar");
 		gestor.execute("Guardar");
-		assertEquals(3, GestorMementos.getGestorMementosCalculadora().getMemento().getValor());
+		assertEquals(3, GestorMementos.getGestorMementosCalculadora().getMemento("0:1").getValor());
 		
 	}
 	@Test
