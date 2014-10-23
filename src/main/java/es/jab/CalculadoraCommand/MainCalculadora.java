@@ -4,15 +4,20 @@ import upm.jbb.IO;
 
 
 public class MainCalculadora {
-    private GestorComandos gestor;
-
+	private GestorComandos gestor;
+    private CalculadoraMementable calcMementable;
+    
     public MainCalculadora() {
-        Calculadora calc = new Calculadora();
+    	this.calcMementable = new CalculadoraMementable(1);
         this.gestor = new GestorComandos();
-        this.gestor.add(new ComandoSumar(calc));
-        this.gestor.add(new ComandoRestar(calc));
-        this.gestor.add(new ComandoIniciar(calc));
-        this.gestor.add(new ComandoImprimir(calc));
+        
+        this.gestor.add(new ComandoSumar(calcMementable));
+        this.gestor.add(new ComandoRestar(calcMementable));
+        this.gestor.add(new ComandoIniciar(calcMementable));
+        this.gestor.add(new ComandoImprimir(calcMementable));
+        this.gestor.add(new ComandoGuardar(calcMementable));
+        this.gestor.add(new ComandoDeshacer(calcMementable));
+       
     }
 
     public void ejecutar() {
